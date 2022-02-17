@@ -36,7 +36,7 @@
                                     <label for="inputPassword6" class="col-form-label">Income:</label>
                                 </div>
                                 <div class="col-auto">
-                                    <input type="text" class="form-control input-field-bg">
+                                    <input id="income-input" type="text" class="form-control input-field-bg">
                                 </div>
                             </div>
                             <!-- income part end -->
@@ -50,7 +50,7 @@
                                     <label for="inputPassword6" class="col-form-label">Food:</label>
                                 </div>
                                 <div class="col-auto">
-                                    <input type="text" class="form-control input-field-bg">
+                                    <input id="food-cost" type="text" class="form-control input-field-bg">
                                 </div>
                             </div>
                             <div class="row justify-content-end g-3 mb-4">
@@ -58,7 +58,7 @@
                                     <label for="inputPassword6" class="col-form-label">Rent:</label>
                                 </div>
                                 <div class="col-auto">
-                                    <input type="text" class="form-control input-field-bg">
+                                    <input id="rent-cost" type="text" class="form-control input-field-bg">
                                 </div>
                             </div>
                             <div class="row justify-content-end g-3 mb-4">
@@ -66,7 +66,7 @@
                                     <label for="inputPassword6" class="col-form-label">Clothes:</label>
                                 </div>
                                 <div class="col-auto">
-                                    <input type="text" class="form-control input-field-bg">
+                                    <input id="cloth-cost" type="text" class="form-control input-field-bg">
                                 </div>
                             </div>
                             <!-- expenses part end -->
@@ -74,8 +74,8 @@
 
                             <!-- total expenses and blance calculate button start -->
                             <div class="row justify-content-center g-3 mb-2">
-                                <button id="calculate-btn"
-                                    class="btn btn-warning w-50 ms-5 fw-normal">Calculate</button>
+                                <button id="calculate-button"
+                                    class="btn btn-secondary w-50 ms-5 fw-normal">Calculate</button>
                             </div>
                             <!-- total expenses and blance calculate button start -->
 
@@ -83,8 +83,9 @@
                             <!-- Total Expenses And Blance Part -->
                             <div class="row justify-content-end me-4 g-3 mb-2">
                                 <div class="col-auto">
-                                    <h6 class="text-center my-3">Total Expenses:<span> 5500</span></h6>
-                                    <h6 class="text-center">Blance:<span> 5500</span></h6>
+                                    <h6 class="text-center my-3">Total Expenses:<span class="ms-1"
+                                            id="expense-field">00</span></h6>
+                                    <h6 class="text-center">Blance:<span class="ms-1" id="total-balance">00</span></h6>
                                 </div>
                             </div>
                         </div>
@@ -95,16 +96,18 @@
                     <div class="row justify-content-end g-3">
                         <div class="d-flex justify-content-center align-items-baseline">
                             <p class="me-3">Save:</p>
-                            <input class="w-25 form-control input-field-bg" type="text">
+                            <input id="save-input" class="w-25 form-control input-field-bg" type="text">
                             <p class="mx-3">%</p>
                             <!-- Saving Button start -->
-                            <button id="saving-btn" class="btn btn-warning w-25">Save</button>
+                            <button id="save-button" class="btn btn-secondary w-25">Save</button>
                             <!-- Saving Button End -->
                         </div>
                         <div class="row justify-content-center g-2">
                             <div class="col-auto">
-                                <h6 class="text-center">Saving Amount: <span>2000</span></h6>
-                                <h6 class="text-center">Remaining Balance:<span> 2500</span></h6>
+                                <h6 class="text-center">Saving Amount:<span class="ms-1" id="save-amount">00</span></h6>
+                                <h6 class="text-center">Remaining Balance:<span id="remaining-balance"
+                                        class="ms-1">00</span>
+                                </h6>
                             </div>
                         </div>
                     </div>
