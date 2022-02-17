@@ -4,6 +4,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 });
 
 
+
 // saving amount event handler or saving button
 document.getElementById('saving-btn').addEventListener('click', function () {
     const savingsAmount = savings();
@@ -14,10 +15,10 @@ document.getElementById('saving-btn').addEventListener('click', function () {
         return;
     }
 
-    // remaining blance
+    // to get remaining blance
     const remainingBalance = balanceTotal - savingsAmount;
 
-    // handle NaN error
+    // handle not a number
     if (isNaN(remainingBalance)) {
         return;
     }
@@ -33,7 +34,7 @@ document.getElementById('saving-btn').addEventListener('click', function () {
 function updateBalance() {
     const incomeAmount = getInputValue('income-input');
 
-    // expense sectors
+    // expense list
     const foodCost = getInputValue('food-cost');
     const rentCost = getInputValue('rent-cost');
     const clothCost = getInputValue('cloth-cost');
@@ -46,7 +47,7 @@ function updateBalance() {
         alert('You have not sufficient amount to expense more');
         return;
     }
-    // handle NaN error
+    // handle not a number
     else if (isNaN(totalExpense)) {
         return;
     }
@@ -55,7 +56,7 @@ function updateBalance() {
     const expenseField = document.getElementById('total-expenses');
     expenseField.innerText = totalExpense;
 
-    // Balance
+    // balance
     const totalBalance = incomeAmount - totalExpense;
 
     // handle NaN error
@@ -69,7 +70,6 @@ function updateBalance() {
 
     return totalBalance;
 };
-
 
 
 
@@ -99,9 +99,6 @@ function getInputValue(inputId) {
 
 
 
-
-
-
 // savings part
 function savings() {
     const incomeAmount = getInputValue('income-input');
@@ -110,7 +107,7 @@ function savings() {
     // get savings amount
     const savings = (incomeAmount * savingsPercent) / 100;
 
-    // handle NaN error
+    // handle not a number
     if (isNaN(savings)) {
         return;
     }
